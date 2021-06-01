@@ -1,0 +1,77 @@
+{
+  "name": "spotify-express-react-app",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Express app that renders spotify data",
+  "keywords": [
+    "express",
+    "react",
+    "spotify"
+  ],
+  "author": "Kim Skovhus Andersen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimskovhusandersen/spotify-express-react-app.git"
+  },
+  "homepage": "/",
+  "scripts": {
+    "start": "concurrently \"npm run build:watch\" \"npm run server:watch\"",
+    "start:test": "npm run build && npm run server",
+    "server": "node server/app.js",
+    "server:watch": "nodemon --ignore './src/' server/app.js",
+    "build": "react-scripts build",
+    "build:watch": "cra-build-watch",
+    "test": "react-scripts test",
+    "cypress:run": "concurrently --kill-others --success first \"npm run start:test\" \"wait-port localhost:3000 && cypress run --browser chrome\"",
+    "cypress:open": "cypress open",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@twind/react": "^0.0.4",
+    "axios": "^0.21.1",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "csurf": "^1.11.0",
+    "dotenv": "^8.2.0",
+    "express": "4.17.1",
+    "express-es6-template-engine": "2.2.3",
+    "querystring": "^0.2.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "reload": "3.1.1",
+    "serialize-javascript": "5.0.1",
+    "web-vitals": "1.1.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "5.12.0",
+    "@testing-library/react": "11.2.7",
+    "@testing-library/user-event": "13.1.9",
+    "concurrently": "6.1.0",
+    "cra-build-watch": "3.4.0",
+    "cross-env": "7.0.3",
+    "cypress": "7.3.0",
+    "wait-port": "0.2.9",
+    "web-vitals": "1.1.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

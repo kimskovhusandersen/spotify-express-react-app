@@ -1,0 +1,23 @@
+ul.playlists {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.playlists > * + * {
+  margin: 2em 0;
+}
+
+ul.playlists li {
+  background-color: #eee;
+  display: flex;
+  border: 1px solid #dedede;
+}
+
+ul.playlists li > * + * {
+  padding: 2rem;
+  flex: 1;
+}
+
+ul.playlists li img {
+  max-height: 150px;
+}
