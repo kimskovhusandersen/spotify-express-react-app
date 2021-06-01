@@ -1,6 +1,20 @@
-# Express Create React App Custom Template
+# Spotify Express React App
 
-Example repo to show how to inject server rendered HTML into a create-react-app based app.
+A demo projects made with Express and React that renders data via the Spotify Web Api
+
+## Setup
+
+Create a .env file in the root directory and add the following data:
+
+```
+CLIENT_ID="[YOUR SPOTIFY CLIENT ID]"
+CLIENT_SECRET="[YOUR SPOTIFY CLIENT SECRET]"
+REDIRECT_URI="[YOUR URL]/api/callback"
+SESSION_SECRET="YOUR SECRET STRING"
+FRONT_URL="http://localhost:3000"
+```
+
+Hint: To test the project locally, you can use ngrok as proxy between spotify and local host
 
 ## Available Scripts
 
